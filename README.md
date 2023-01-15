@@ -1,7 +1,7 @@
 # cpp_module_05
 ### 이슈 관리: [전체 이슈 list](https://github.com/brixxt27/cpp_module_05/issues/1)
 
-# ex00: 
+# Exercise 00: Mommy, when I grow up, I want to be a bureaucrat!
 ## Usage
 ```
 git clone https://github.com/brixxt27/cpp_module_05.git
@@ -42,19 +42,38 @@ catch (std::exception & e)
 
 <bt> </bt>
 
-# ex01: 
+# Exercise 01: Form up, maggots!
 ## Usage
 ```
 git clone https://github.com/brixxt27/cpp_module_05.git
 cd cpp_module_05/ex01
 make
-./
+./form_up_maggots
 ```
 ## Summary
+- Turn-in directory : ex01/
+- Files to turn in : Files from previous exercise + Form.{h, hpp}, Form.cpp
+- Forbidden functions : None
 ## Detail
+- 이제 관료는 완성 되었을테니, 그들에게 무엇인가 할 일을 주자! 양식 더미를 채우는 것보다 좋은 게 있을까?
+- Form class 는 다음과 같이 만들어야 해:
+	- constant name
+	- 서명 되어 있는지 확인할 수 있는 boolean 변수(생성될 때는 false)
+	- 서명하기 위해 요구되는 constant grade
+	- 그리고 이를 집행할 수 있는 constant grade
+- 모든 멤버는 private이고, protected가 아니다.
+- From 의 grade는 Bureaucrat에 적용 되는 예외와 동일하게 적용된다. 즉, Form::GradeTooHighException and Form::GradeTooLowException 이 범위를 벗어났을 때 발생해야 한다.
+- 이전과 같이 모든 멤버 변수를 위한 getter 와, 모든 form의 정보를 출력하는 operator<< 연산자를 오버로딩해줘!
+- Bureaucrat을 인자로 받는 beSigned() 멤버변수를 Form에 추가해줘. 그건 만약 관료의 grade가 form의 grade 보다 높거나 같으면 보고서의 서명 상태를 변경한다. 만약에 서명하기에 등급이 너무 낮으면 Form::GradeTooLowException을 던져야 한다.
+- 마지막으로 Bureaucrat class에 signForm() 멤버함수를 추가해줘. 만약 서명된 문서라면 다음과 같이 출력 될거야:
+	- {bureaucrat} signed {form}
+- 그렇지 않으면 다음과 같이 출력 될거야
+	- {bureaucrat} couldn’t sign {form} because {reason}.
+- 테스트를 main문에 추가해줘.
+
 <bt> </bt>
 
-# ex02: 
+# Exercise 02: No, you need form 28B, not 28C... 
 ## Usage
 ```
 git clone https://github.com/brixxt27/cpp_module_05.git
@@ -63,10 +82,12 @@ make
 ./
 ```
 ## Summary
+- Files to turn in : Makefile, main.cpp, Bureaucrat.[{h, hpp}, cpp], Bureaucrat.cpp + AForm.[{h, hpp},cpp], ShrubberyCreationForm.[{h, hpp},cpp], +
+RobotomyRequestForm.[{h, hpp},cpp], PresidentialPardonForm.[{h, hpp},cpp]
 ## Detail
 <bt> </bt>
 
-# ex03: 
+# Exercise 03: At least this beats coffee-making 
 ## Usage
 ```
 git clone https://github.com/brixxt27/cpp_module_05.git
@@ -75,5 +96,8 @@ make
 ./
 ```
 ## Summary
+- Turn-in directory : ex03/
+- Files to turn in : Files from previous exercises + Intern.{h, hpp}, Intern.cpp
+- Forbidden functions : None
 ## Detail
 <bt> </bt>
