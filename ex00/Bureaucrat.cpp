@@ -78,7 +78,9 @@ Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& rhs)
 	return *this;
 }
 
-//std::ostream&	operator<<(std::ostream& out, Bureaucrat& human)
-//{
-
-//}
+std::ostream&	operator<<(std::ostream& out, Bureaucrat& human)
+{
+	out << human.getName() << ", bureaucrat grade " << human.getGrade() << "." << std::endl;
+	
+	return out;
+}
