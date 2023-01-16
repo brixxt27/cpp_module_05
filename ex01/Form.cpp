@@ -81,7 +81,7 @@ std::ostream&	operator<<(std::ostream& out, Form& human)
 	std::cout << std::setw(longest_string.size()) << "Form's name: " << human.getName() << std::endl;
 	std::cout << longest_string << (human.getIsSigned() == true ? "Yes" : "No") << std::endl;
 	std::cout << "This form can be signed by grade " << human.getSignableGrade() << " or higher Bureaucrat." << std::endl;
-	std::cout << "This form can be excuted by grade " << human.getSignableGrade() << " or higher Bureaucrat.";
+	std::cout << "This form can be excuted by grade " << human.getExcutableGrade() << " or higher Bureaucrat.";
 
 	return out;
 }
