@@ -4,6 +4,9 @@
 #include <exception>
 #include <iostream>
 
+#define HIGHEST_GRADE 1
+#define LOWEST_GRADE 150
+
 class Bureaucrat
 {
 public:
