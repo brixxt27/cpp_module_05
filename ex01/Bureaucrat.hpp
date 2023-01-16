@@ -4,6 +4,9 @@
 #include <exception>
 #include <iostream>
 
+#define HIGHEST_GRADE 1
+#define LOWEST_GRADE 150
+
 class Form;
 
 class Bureaucrat
@@ -18,7 +21,7 @@ public:
 	void				incrementGrade();
 	void				decrementGrade();
 
-	void				signForm(const Form& form) const;
+	void				signForm(Form& form) const;
 
 private:
 	const std::string	_name;
@@ -28,7 +31,6 @@ private:
 	{
 		virtual const char*	what() const throw();
 	};
-	
 	class GradeTooLowException : public std::exception
 	{
 		virtual const char*	what() const throw();

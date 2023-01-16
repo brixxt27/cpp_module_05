@@ -8,9 +8,9 @@ Form::Form(std::string name, int signable_grade, int excutable_grade)
 	, _signable_grade(signable_grade)
 	, _excutable_grade(excutable_grade)
 {
-	if (_signable_grade < 1 || _excutable_grade < 1)
+	if (_signable_grade < HIGHEST_GRADE || _excutable_grade < HIGHEST_GRADE)
 		throw GradeTooHighException();
-	else if (_signable_grade > 150 || _excutable_grade > 150)
+	else if (_signable_grade > LOWEST_GRADE || _excutable_grade > LOWEST_GRADE)
 		throw GradeTooLowException();
 }
 
@@ -49,6 +49,8 @@ int	 Form::getExcutableGrade() const
 
 void Form::beSigned(const Bureaucrat& man)
 {
+	if (_is_signed == true)
+		throw AleadyBeSigned();
 	if (_signable_grade < man.getGrade())
 		throw GradeTooLowException();
 	_is_signed = true;
@@ -62,6 +64,11 @@ const char*	Form::GradeTooHighException::what() const throw()
 const char*	Form::GradeTooLowException::what() const throw()
 {
 	return "Grade is too low!";
+}
+
+const char*	Form::AleadyBeSigned::what() const throw()
+{
+	return "Aleady be signed!";
 }
 
 Form::Form()
