@@ -2,14 +2,38 @@
 
 int	main(void)
 {
-	Bureaucrat	man1("jim", 150);
-	Bureaucrat	man2("bob", 3);
+	try {
+		Bureaucrat	man1("bob", 3);
 
-	man1.incrementGrade();
-	man1.incrementGrade();
-	std::cout << man1;
+		man1.incrementGrade();
+		man1.incrementGrade();
+		std::cout << man1 << std::endl;
 
-	man2.decrementGrade();
-	man2.decrementGrade();
-	std::cout << man2;
+		man1.incrementGrade();
+		man1.incrementGrade();
+		std::cout << man1 << std::endl;
+
+		man1.incrementGrade();
+		man1.incrementGrade();
+		std::cout << man1 << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		Bureaucrat	man2("jim", 149);
+
+		man2.decrementGrade();
+		std::cout << man2 << std::endl;
+
+		man2.decrementGrade();
+		std::cout << man2 << std::endl;
+
+		man2.decrementGrade();
+		std::cout << man2 << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 }
