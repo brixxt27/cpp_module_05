@@ -1,9 +1,10 @@
-NAME	=	jayoon.out
+NAME	=	form_up_maggots
 
 SRCS	=	main.cpp			\
-			AMateria.cpp		\
+			Bureaucrat.cpp		\
+			Form.cpp
 
-INCS	=	AMateria.hpp		\
-			Character.hpp		\
+INCS	=	Bureaucrat.hpp		\
+			Form.hpp
 
 include ../template.mk
