@@ -37,6 +37,6 @@ RobotomyRequestForm::RobotomyRequestForm()
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& rhs)
 {
-    std::cout << rhs._target << " RobotomyRequestForm Assignment operator call" << std::endl;
+	std::cout << rhs.getName() << " This operator is banned" << std::endl;
     return *this;
 }
