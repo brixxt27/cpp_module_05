@@ -46,7 +46,6 @@ int	 AForm::getExcutableGrade() const
 	return _excutable_grade;
 }
 
-
 void AForm::beSigned(const Bureaucrat& man)
 {
 	if (_is_signed == true)

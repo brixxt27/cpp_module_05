@@ -1,5 +1,5 @@
-#ifndef ROBOTOMY_REQUEST_FORM_HPP
-#define ROBOTOMY_REQUEST_FORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
 #include <iostream>
@@ -11,7 +11,7 @@ public:
 	RobotomyRequestForm(const RobotomyRequestForm& other);
 	virtual ~RobotomyRequestForm();
 
-	virtual void execute(Bureaucrat const& executor) const;
+	virtual void	execute(Bureaucrat const& executor) const;
 
 private:
 	std::string _target;
