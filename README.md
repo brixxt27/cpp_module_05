@@ -82,9 +82,27 @@ make
 ./
 ```
 ## Summary
-- Files to turn in : Makefile, main.cpp, Bureaucrat.[{h, hpp}, cpp], Bureaucrat.cpp + AForm.[{h, hpp},cpp], ShrubberyCreationForm.[{h, hpp},cpp], +
-RobotomyRequestForm.[{h, hpp},cpp], PresidentialPardonForm.[{h, hpp},cpp]
+- Turn-in directory : ex02/
+- Files to turn in : Files from previous exercises + ShrubberyCreationForm.[{h, hpp},cpp], RobotomyRequestForm.[{h, hpp},cpp], PresidentialPardonForm.[{h, hpp},cpp]
+- Forbidden functions : None
 ## Detail
+- 이제 당신은 기본적인 보고서를 가지고 있고, 더 많은 것들을 해볼거야!
+- 모든 상황에서, base class 인 Form은 추상 클래스여야만 해. form의 특성은 private 로 남아있어야 하고, base class 에 있어야 한다는 걸 명심해!
+- 다음과 같은 concrete class 가 필요해:
+	- ShrubberyCreationForm: 요구되는 등급: sign 145, exec 137
+	{target}_shrubbery 파일을 working directory에 만들고, ASCII 나무를 안에 작성해라.
+	- RobotomyRequestForm: sign 72, exec 45
+	약간의 드릴 소리가 납니다. {target}이 시간의 50% 동안 성공적으로 로봇화 되었음을 알립니다. 그렇지 않으면 로봇 공학이 실패했음을 알립니다.
+	- PresidentialPardonForm: sign 25, exec 5
+	{target} 이 Zaphod Beeblebrox 에 의해 사면 되었음을 알립니다.
+- 이 concrete class 들의 생성자에는 모두 하나의 인자를 가지고 있습니다: form의 타겟. 예를 들어 만약 집에 shrubbery(관목숲)을 심고 싶다면 "집"을 타겟으로 해서 인자에 넣는다. (이 말은 std::string으로 하나를 받을 것 같다.)
+- execute(Bureaucrat const & executor) const 멤버함수를 Form의 base class에 만들고, concrete class에 form 동작을 실행하는 함수를 구현해라.
+- 양식에 서명이 되어 있고, 양식을 실행하려는 관료의 등급이 충분히 높은지 확인해야 합니다. 그렇지 않으면 적절한 예외를 throw를 합니다.
+- 모든 구체적인 클래스 또는 기본 클래스에서 요구 사항을 확인하는 것은 당신에게 달렸습니다.
+- 마지막으로 Bureaucrat에 executeForm(Form const & form) 멤버 함수를 추가하세요. 만약 성공적으로 실행된다면 다음과 같은 출력을 합니다:
+	- {bureaucrat} executed {form}
+-  만약 아니라면, 명시적인 오류를 출력하십시오.
+- 테스트를 main에 추가하세요!
 <bt> </bt>
 
 # Exercise 03: At least this beats coffee-making 
