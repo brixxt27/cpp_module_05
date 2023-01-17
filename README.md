@@ -92,7 +92,7 @@ make
 	- ShrubberyCreationForm: 요구되는 등급: sign 145, exec 137
 	{target}_shrubbery 파일을 working directory에 만들고, ASCII 나무를 안에 작성해라.
 	- RobotomyRequestForm: sign 72, exec 45
-	약간의 드릴 소리가 납니다. {target}이 시간의 50% 동안 성공적으로 로봇화 되었음을 알립니다. 그렇지 않으면 로봇 공학이 실패했음을 알립니다.
+	약간의 드릴 소리가 납니다. {target}이 50%의 확률로 성공적으로 로봇화 되었음을 알립니다. 그렇지 않으면 로봇 공학이 실패했음을 알립니다.
 	- PresidentialPardonForm: sign 25, exec 5
 	{target} 이 Zaphod Beeblebrox 에 의해 사면 되었음을 알립니다.
 - 이 concrete class 들의 생성자에는 모두 하나의 인자를 가지고 있습니다: form의 타겟. 예를 들어 만약 집에 shrubbery(관목숲)을 심고 싶다면 "집"을 타겟으로 해서 인자에 넣는다. (이 말은 std::string으로 하나를 받을 것 같다.)
