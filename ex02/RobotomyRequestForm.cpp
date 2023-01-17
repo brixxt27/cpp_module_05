@@ -1,5 +1,4 @@
 #include "RobotomyRequestForm.hpp"
-#include <time.h>
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
     : AForm("RobotomyRequestForm", SIGN, EXEC)
@@ -22,7 +21,6 @@ void RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
 	checkException(executor);
 
-	srand(static_cast<unsigned int>(time(NULL)));
     std::cout << "* DRILLING NOISES *" << std::endl << _target;
     if (std::rand() % 2 == 1)
         std::cout << " has been successfully robotimized!" << std::endl;
