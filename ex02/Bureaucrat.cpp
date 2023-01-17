@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
 	: _name(name)
@@ -45,7 +45,7 @@ void	Bureaucrat::decrementGrade()
 		throw GradeTooLowException();
 }
 
-void	Bureaucrat::signForm(Form& form) const
+void	Bureaucrat::signForm(AForm& form) const
 {
 	try {
 		form.beSigned(*this);

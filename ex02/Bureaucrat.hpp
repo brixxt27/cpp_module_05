@@ -7,7 +7,7 @@
 #define HIGHEST_GRADE 1
 #define LOWEST_GRADE 150
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -21,7 +21,8 @@ public:
 	void				incrementGrade();
 	void				decrementGrade();
 
-	void				signForm(Form& form) const;
+	void				signForm(AForm& form) const;
+	void				executeForm(AForm const & form);
 
 private:
 	const std::string	_name;

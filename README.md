@@ -83,7 +83,7 @@ make
 ```
 ## Summary
 - Turn-in directory : ex02/
-- Files to turn in : Files from previous exercises + ShrubberyCreationForm.[{h, hpp},cpp], RobotomyRequestForm.[{h, hpp},cpp], PresidentialPardonForm.[{h, hpp},cpp]
+- Files to turn in : Makefile, main.cpp, Bureaucrat.[{h, hpp},cpp], Bureaucrat.cpp + AForm.[{h, hpp},cpp], ShrubberyCreationForm.[{h, hpp},cpp], + RobotomyRequestForm.[{h, hpp},cpp], PresidentialPardonForm.[{h, hpp},cpp]
 - Forbidden functions : None
 ## Detail
 - 이제 당신은 기본적인 보고서를 가지고 있고, 더 많은 것들을 해볼거야!
@@ -97,7 +97,7 @@ make
 	{target} 이 Zaphod Beeblebrox 에 의해 사면 되었음을 알립니다.
 - 이 concrete class 들의 생성자에는 모두 하나의 인자를 가지고 있습니다: form의 타겟. 예를 들어 만약 집에 shrubbery(관목숲)을 심고 싶다면 "집"을 타겟으로 해서 인자에 넣는다. (이 말은 std::string으로 하나를 받을 것 같다.)
 - execute(Bureaucrat const & executor) const 멤버함수를 Form의 base class에 만들고, concrete class에 form 동작을 실행하는 함수를 구현해라.
-- 양식에 서명이 되어 있고, 양식을 실행하려는 관료의 등급이 충분히 높은지 확인해야 합니다. 그렇지 않으면 적절한 예외를 throw를 합니다.
+- 양식에 서명이 이미 되어 있는지 확인하는 것과, 양식을 실행하려는 관료의 등급이 충분히 높은지 확인해야 합니다. 그렇지 않으면 적절한 예외를 throw를 합니다.
 - 모든 구체적인 클래스 또는 기본 클래스에서 요구 사항을 확인하는 것은 당신에게 달렸습니다.
 - 마지막으로 Bureaucrat에 executeForm(Form const & form) 멤버 함수를 추가하세요. 만약 성공적으로 실행된다면 다음과 같은 출력을 합니다:
 	- {bureaucrat} executed {form}
