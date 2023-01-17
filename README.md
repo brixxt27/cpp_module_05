@@ -79,7 +79,7 @@ make
 git clone https://github.com/brixxt27/cpp_module_05.git
 cd cpp_module_05/ex02
 make
-./
+./no_you_need_form_28B_not_28C
 ```
 ## Summary
 - Turn-in directory : ex02/
@@ -111,11 +111,26 @@ make
 git clone https://github.com/brixxt27/cpp_module_05.git
 cd cpp_module_05/ex03
 make
-./
+./at_least_this_beats_coffee_making 
 ```
 ## Summary
 - Turn-in directory : ex03/
 - Files to turn in : Files from previous exercises + Intern.{h, hpp}, Intern.cpp
 - Forbidden functions : None
 ## Detail
+- 양식을 작성하는 것은 충분히 성가신 일이기 때문에 우리 관료들에게 하루 종일 이것을 하라고 요구하는 것은 잔인한 일입니다. 다행히고 인턴이 존재합니다. 인턴에게는 이름도, 등급도, 고유한 특성도 없습니다. 관료들이 신경 쓰는 유일한 것은 인턴이 일하고 있는 것입니다.
+- 그러나 인턴에게는 중요한 기능이 있습니다: makeForm(). 이것은 두 개의 문자열이 필요합니다.
+- 첫 번째는 폼의 이름이고, 두 번째는 폼의 대상입니다. 대상이 두 번째 인자(매개변수)로 초기화 될 때 Form 객체(이름은 매개변수로 전달 된 이름)의 포인터를 반환합니다.
+- 다음과 같이 인쇄됩니다: 
+	- Intern creates {form}
+- 만약 form 이름이 없다면 명시적인 에러 메시지를 띄워주세요.
+- 당신은 읽기 어렵고, 더러운 해답인 if/elseif/else forest 를 피해햐 합니다. 이것은 평가 과정에서 허용되지 않습니다.
+- 예를 들어 Bender가 타겟인 RobotomyRequestForm 은 아래의 코드로 만든다.
+```
+{
+	Intern someRandomIntern;
+	Form* rrf;
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+}
+```
 <bt> </bt>
