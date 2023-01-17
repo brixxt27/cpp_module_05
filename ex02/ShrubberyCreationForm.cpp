@@ -19,11 +19,6 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-std::string	ShrubberyCreationForm::getTarget() const
-{
-	return _target;
-}
-
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	std::string		file_name = _target + "_shrubbery";
@@ -48,7 +43,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm()
-	: AForm("ShrubberyCreationForm", LOWEST_GRADE, LOWEST_GRADE)
+	: AForm("ShrubberyCreationForm", SIGN, EXEC)
 {
 }
 
