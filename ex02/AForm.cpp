@@ -56,6 +56,14 @@ void AForm::beSigned(const Bureaucrat& man)
 	_is_signed = true;
 }
 
+void	AForm::checkException(const Bureaucrat& executor) const
+{
+	if (_is_signed == false)
+		throw BeNotSigned();
+	if (_excutable_grade < executor.getGrade())
+		throw GradeTooLowException();
+}
+
 const char*	AForm::GradeTooHighException::what() const throw()
 {
 	return "Grade is too high!";
@@ -74,6 +82,11 @@ const char*	AForm::AleadyBeSigned::what() const throw()
 const char*	AForm::BeNotSigned::what() const throw()
 {
 	return "Be not signed!";
+}
+
+const char* AForm::FileOpenError::what() const throw()
+{
+    return "FileOpenError!";
 }
 
 AForm::AForm()

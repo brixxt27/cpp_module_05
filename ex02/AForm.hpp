@@ -22,7 +22,8 @@ public:
 	int					getExcutableGrade() const;
 
 	void				beSigned(const Bureaucrat& man);
-	virtual void	execute(Bureaucrat const & executor) const = 0;
+	virtual void		execute(Bureaucrat const & executor) const = 0;
+	void				checkException(const Bureaucrat& man) const;
 
 	class GradeTooHighException : public std::exception
 	{
@@ -40,6 +41,11 @@ public:
 		virtual const char*	what() const throw();
 	};
 	class BeNotSigned : public std::exception
+	{
+	public:
+		virtual const char*	what() const throw();
+	};
+	class FileOpenError : public std::exception
 	{
 	public:
 		virtual const char*	what() const throw();

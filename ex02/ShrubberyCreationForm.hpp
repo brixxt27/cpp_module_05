@@ -11,9 +11,13 @@ public:
 	ShrubberyCreationForm(const ShrubberyCreationForm& other);
 	virtual ~ShrubberyCreationForm();
 
+	std::string	getTarget() const;
+
 	virtual void	execute(Bureaucrat const & executor) const;
 
 private:
+	std::string	_target;
+
 	enum e_grade
 	{
 		SIGN = 145,

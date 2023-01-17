@@ -1,44 +1,29 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int	main(void)
 {
-	//try {
-	//	Bureaucrat	man1("Jim", 1);
-	//	AForm		form1("Be a Cadet", 3, 6);
+	try {
+		Bureaucrat				man1("Jim", 5);
+		ShrubberyCreationForm	form1("House");
 
-	//	std::cout << form1 << std::endl;
+		man1.signForm(form1);
+		form1.execute(man1);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 
-	//	form1.beSigned(man1);
+	try {
+		Bureaucrat				man1("Jim", 5);
+		Bureaucrat				man2("Tom", 150);
+		ShrubberyCreationForm	form1("Saerom");
 
-	//	std::cout << form1 << std::endl;
-	//	form1.beSigned(man1);
-	//}
-	//catch (std::exception& e) {
-	//	std::cout << e.what() << std::endl;
-	//}
-
-	//try {
-	//	Bureaucrat	man1("Bob", 7);
-	//	AForm		form1("Burn the black-hole", 0, 199);
-
-	//	std::cout << form1 << std::endl;
-
-	//	form1.beSigned(man1);
-	//}
-	//catch (std::exception& e) {
-	//	std::cout << e.what() << std::endl;
-	//}
-
-	//try {
-	//	Bureaucrat	man1("James", 1);
-	//	AForm		form1("End of cpp module", 2, 140);
-
-	//	std::cout << form1 << std::endl;
-
-	//	man1.signForm(form1);
-	//}
-	//catch (std::exception& e) {
-	//	std::cout << e.what() << std::endl;
-	//}
+		man1.signForm(form1);
+		form1.execute(man2);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 }
