@@ -61,6 +61,7 @@ void AForm::beSigned(const Bureaucrat& man)
 	if (_signable_grade < man.getGrade())
 		throw GradeTooLowException();
 	_is_signed = true;
+	std::cout << man.getName() << " has signed!" << std::endl;
 }
 
 void	AForm::checkException(const Bureaucrat& executor) const
