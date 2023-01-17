@@ -7,7 +7,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target)
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& other)
-	: AForm(other.getName(), other.getSignableGrade(), other.getExcutableGrade())
+	: AForm(other.getName(), other.getIsSigned(), other.getSignableGrade(), other.getExcutableGrade())
 	, _target(other._target)
 {
     *this = other;

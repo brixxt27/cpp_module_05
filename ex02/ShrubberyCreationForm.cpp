@@ -8,7 +8,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
-	: AForm(other.getName(), other.getSignableGrade(), other.getExcutableGrade())
+	: AForm(other.getName(), other.getIsSigned(), other.getSignableGrade(), other.getExcutableGrade())
 	, _target(other._target)
 {
 }

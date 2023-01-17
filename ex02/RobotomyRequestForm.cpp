@@ -7,7 +7,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target)
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
-	: AForm(other.getName(), other.getSignableGrade(), other.getExcutableGrade())
+	: AForm(other.getName(), other.getIsSigned(), other.getSignableGrade(), other.getExcutableGrade())
 	, _target(other._target)
 {
     *this = other;

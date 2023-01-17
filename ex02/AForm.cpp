@@ -26,6 +26,14 @@ AForm::~AForm()
 {
 }
 
+AForm::AForm(std::string name, bool is_signed, int signable_grade, int excutable_grade)
+	: _name(name)
+	, _is_signed(is_signed)
+	, _signable_grade(signable_grade)
+	, _excutable_grade(excutable_grade)
+{
+}
+
 const std::string&	AForm::getName() const
 {
 	return _name;

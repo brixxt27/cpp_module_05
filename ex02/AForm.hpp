@@ -16,6 +16,7 @@ public:
 	AForm(const AForm& other);
 	virtual ~AForm();
 
+	AForm(std::string name, bool is_signed, int signable_grade, int excutable_grade);
 	const std::string&	getName() const;
 	bool				getIsSigned() const;
 	int					getSignableGrade() const;
