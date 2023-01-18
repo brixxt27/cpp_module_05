@@ -8,8 +8,6 @@ class Intern
 {
 public:
 	Intern();
-	Intern(const Intern& other);
-	Intern&	operator=(const Intern& rhs);
 	virtual ~Intern();
 
 	AForm*	makeForm(std::string form_name, std::string form_target) const;
@@ -21,6 +19,9 @@ private:
 	public:
 		virtual const char*	what() const throw();
 	};
+	
+	Intern(const Intern& other);
+	Intern&	operator=(const Intern& rhs);
 };
 
 #endif

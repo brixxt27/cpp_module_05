@@ -7,18 +7,6 @@ Intern::Intern()
 {
 }
 
-Intern::Intern(const Intern& other)
-{
-	*this = other;
-}
-
-Intern&	Intern::operator=(const Intern& rhs)
-{
-	if (this == &rhs)
-		return *this;
-	return *this;
-}
-
 Intern::~Intern()
 {
 }
@@ -60,4 +48,16 @@ AForm*	Intern::makeForm(std::string form_name, std::string form_target) const
 const char*	Intern::NonExistentForm::what() const throw()
 {
 	return "This is a nonexistent form!";
+}
+
+Intern::Intern(const Intern& other)
+{
+	*this = other;
+}
+
+Intern&	Intern::operator=(const Intern& rhs)
+{
+	if (this == &rhs)
+		return *this;
+	return *this;
 }
