@@ -72,6 +72,10 @@ const char*	Form::AleadyBeSigned::what() const throw()
 }
 
 Form::Form()
+	: _name("Default")
+	, _is_signed(false)
+	, _signable_grade(LOWEST_GRADE)
+	, _excutable_grade(LOWEST_GRADE)
 {
 }
 

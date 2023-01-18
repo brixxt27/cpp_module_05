@@ -55,8 +55,8 @@ public:
 private:
 	const std::string	_name;
 	bool				_is_signed;
-	int					_signable_grade;
-	int					_excutable_grade;
+	int const			_signable_grade;
+	int const			_excutable_grade;
 	
 	AForm();
 	AForm&	operator=(const AForm& rhs);
