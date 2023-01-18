@@ -10,6 +10,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
 	: AForm(other.getName(), other.getIsSigned(), other.getSignableGrade(), other.getExcutableGrade())
 	, _target(other._target)
 {
+    *this = other;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()

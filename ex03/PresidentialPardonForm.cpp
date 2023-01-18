@@ -10,6 +10,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& oth
 	: AForm(other.getName(), other.getIsSigned(), other.getSignableGrade(), other.getExcutableGrade())
 	, _target(other._target)
 {
+    *this = other;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
